@@ -17,7 +17,7 @@ type inflectionSample struct {
 	str, out string
 }
 
-func TestCamel(t *testing.T) {
+func TestToCamel(t *testing.T) {
 	samples := []inflectionSample{
 		{"sample text", "sampleText"},
 		{"sample-text", "sampleText"},
@@ -27,13 +27,13 @@ func TestCamel(t *testing.T) {
 	}
 
 	for _, sample := range samples {
-		if out := Camel(sample.str); out != sample.out {
+		if out := ToCamel(sample.str); out != sample.out {
 			t.Errorf("got %q, expected %q", out, sample.out)
 		}
 	}
 }
 
-func TestKebab(t *testing.T) {
+func TestToDash(t *testing.T) {
 	samples := []inflectionSample{
 		{"sample text", "sample-text"},
 		{"sample-text", "sample-text"},
@@ -43,13 +43,13 @@ func TestKebab(t *testing.T) {
 	}
 
 	for _, sample := range samples {
-		if out := Kebab(sample.str); out != sample.out {
+		if out := ToDash(sample.str); out != sample.out {
 			t.Errorf("got %q, expected %q", out, sample.out)
 		}
 	}
 }
 
-func TestPascal(t *testing.T) {
+func TestToPascal(t *testing.T) {
 	samples := []inflectionSample{
 		{"sample text", "SampleText"},
 		{"sample-text", "SampleText"},
@@ -59,13 +59,13 @@ func TestPascal(t *testing.T) {
 	}
 
 	for _, sample := range samples {
-		if out := Pascal(sample.str); out != sample.out {
+		if out := ToPascal(sample.str); out != sample.out {
 			t.Errorf("got %q, expected %q", out, sample.out)
 		}
 	}
 }
 
-func TestSnake(t *testing.T) {
+func TestToUnderscore(t *testing.T) {
 	samples := []inflectionSample{
 		{"sample text", "sample_text"},
 		{"sample-text", "sample_text"},
@@ -75,7 +75,7 @@ func TestSnake(t *testing.T) {
 	}
 
 	for _, sample := range samples {
-		if out := Snake(sample.str); out != sample.out {
+		if out := ToUnderscore(sample.str); out != sample.out {
 			t.Errorf("got %q, expected %q", out, sample.out)
 		}
 	}
