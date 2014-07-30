@@ -74,6 +74,7 @@ func TestToUnderscore(t *testing.T) {
 		{"sample 2 Text", "sample_2_text"},
 		{"SAMPLE 2 TEXT", "sample_2_text"},
 		{"Base64Encode", "base64_encode"},
+		{"something.com", "something_com"},
 	}
 
 	for _, sample := range samples {
