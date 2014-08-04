@@ -23,7 +23,7 @@ func lower(str string) string {
 func split(str string) (words []string) {
 	repl := strings.NewReplacer("-", " ", "_", " ")
 
-	rex1 := regexp.MustCompile("([A-Z])")
+	rex1 := regexp.MustCompile("([A-Z]+)")
 	rex2 := regexp.MustCompile("(\\w+)")
 
 	str = trim(str)
