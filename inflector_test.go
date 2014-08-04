@@ -76,6 +76,7 @@ func TestToUnderscore(t *testing.T) {
 		{"SAMPLE 2 TEXT", "sample_2_text"},
 		{"Base64Encode", "base64_encode"},
 		{"FOO:BAR$BAZ", "foo_bar_baz"},
+		{"FOO#BAR#BAZ", "foo_bar_baz"},
 		{"something.com", "something_com"},
 	}
 
